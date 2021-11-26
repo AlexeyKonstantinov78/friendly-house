@@ -1,2 +1,3 @@
 # friendly-house
-friendly-house
+
+учебный проект
