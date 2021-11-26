@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./fonts/HelveticaNeueCyr-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/HelveticaNeueCyr-Roman.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/HelveticaNeueCyr-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Comfortaa-Regular.woff2" as="font" type="font/woff2" crossorigin>    
+    <title>friendly house</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="page">
+    <main class="main container">
+        <section class="present">
+            <h2 class="present__title">О приюте</h2>
+            <p class="present__discription">Приют "Friendly House" - это целый комплекс 
+                для бездомных и брошенных животных. 
+                    
+                В приюте работает сплочённая команда, которая 
+                занимается помощью бездомным животным 
+                в течении многих лет. Мы заботимся о качестве 
+                жизни наших подопечных и осуществляем 
+                профессиональный медицинский уход.
+            </p>                                
+        </section>
+        <article class="help">
+            <h2 class="help__title">Как ты можешь нам помочь?</h2> 
+            <ol class="help__items">
+                <li class="help__item"> 
+                    <div class="help__content">
+                        <h3 class="help__h3">Финансово</h3>
+                        <p class="help__discription">Мы будем рады любым пожертвованиям. 
+                            Деньги пойдут на корм, лечение и уход, 
+                            а также, на обустройство территории, где 
+                            обитают наши маленькие питомцы.</p>
+                    </div>
+                    
+                </li>
+                <li class="help__item">
+                    <div class="help__content">
+                        <h3 class="help__h3">Стать волонером</h3>
+                        <p class="help__discription">Наш приют "Friendly House" привлекает волонтеров для 
+                            оказания помощи в самых разных форматах! От финансовой помощи 
+                            и набирающего популярность интеллектуального 
+                            волонтерства до помощи руками. 
+
+                            Нам всегда нужна помощь с выгулом подопечных, уборкой 
+                            помещений, привезти в приют корм или медикаменты, помочь 
+                            с перевозкой животных в клиники, забрать и привезти вещи 
+                            и много всего другого. Мы всегда рады любой помощи, 
+                            присоединяйтесь к нашей дружной команде! :)</p>
+                    </div>                    
+                </li>
+                <li class="help__item">
+                    <div class="help__content">
+                        <h3 class="help__h3">Стать опекуном</h3>
+                        <p class="help__discription help__discription_bold">Хотите друга, но не можете взять домой?  
+                            Проект опеки - идеальное решение!</p>
+                        <p class="help__discription">Взять под опеку животное, у которого еще нет 
+                            опекуна, – это как завести питомца, о котором всю 
+                            жизнь мечтал, но не мог себе этого позволить 
+                            по каким-либо причинам.</p>
+                    </div>                                     
+                </li>
+            </ol>
+        </article>
+        <section class="form">
+            <form class="form__content" action="https://jsonplaceholder.typicode.com/posts" method="post" target="_blank">
+                <h2 class="form__title">Ты можешь помочь нам!</h2>
+                <p class="form__subscription">Хочешь забрать питомца, стать волонтером, или опекуном?
+                    <span class="form__add">Свяжись с нами!</span></p>
+                <ol class="form__items">
+                    <li class="form__item"><a href="tel:88493003957" class="form__phone">8 (849) 300 - 39 -57</a></li>
+                    <li class="form__item"><a href="mailto:friendlyhouse@gmail.com" class="form__email">FriendlyHouse@gmail.com</a></li>
+                </ol>
+                <h3 class="form__title-name">Или оставь свои контакты и мы сами свяжемся с тобой!</h3>
+                <div class="form__label-input">
+                    <label class="form__label-name">Номер телефона<input class="form__input" type="tel" name="phone"></label>
+                    <label class="form__label-name">E-mail<input class="form__input" type="email" name="email"></label>
+                </div>                
+                <button class="form__btn" type="submit">Отправить</button>                
+            </form>
+        </section>
+    </main>    
+</body>
+</html>
