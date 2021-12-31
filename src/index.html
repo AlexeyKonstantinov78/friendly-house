@@ -9,9 +9,20 @@
     <link rel="preload" href="./fonts/HelveticaNeueCyr-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Comfortaa-Regular.woff2" as="font" type="font/woff2" crossorigin>    
     <title>friendly house</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <script defer src="./js/jquery-3.6.0.min.js"></script>
-    <script defer src="./js/script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const createLink = url => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = url;
+                document.head.append(link);
+            };
+            createLink('css/index.css');
+        });
+    </script>
+    
+    <script defer src="./js/index.min.js"></script>
 </head>
 <body class="page">
     <header class="header">
@@ -25,17 +36,20 @@
                     </svg>
                 </button>                
                 <nav class="navigation menu-burger__nav close">
-
                     <ul class="menu-burger__items">
-                        <li class="menu-burger__item"><a href="#" class="menu-burger__link">О приюте</a></li>
-                        <li class="menu-burger__item"><a href="#" class="menu-burger__link">Наши проекты</a></li>
-                        <li class="menu-burger__item"><a href="#" class="menu-burger__link">Как ты можешь помочь нам?</a></li>
-                        <li class="menu-burger__item"><a href="#" class="menu-burger__link">Наши питомцы</a></li>
+                        <li class="menu-burger__item"><a href="#present" class="menu-burger__link">О приюте</a></li>
+                        <li class="menu-burger__item"><a href="#my-project" class="menu-burger__link">Наши проекты</a></li>
+                        <li class="menu-burger__item"><a href="#help" class="menu-burger__link">Как ты можешь помочь нам?</a></li>
+                        <li class="menu-burger__item"><a href="#pets" class="menu-burger__link">Наши питомцы</a></li>
                         <li class="menu-burger__item"><a href="#" class="menu-burger__link">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
-            <img class="logo__img" src="./img/logo.png" width="356" height="45" alt="Логотип Friendly House приют для живтоных">
+            <picture>
+                <source srcset="./img/logo.avif" type="image/avif">
+                <source srcset="./img/logo.webp" type="image/webp">                
+                <img class="logo__img" src="./img/logo.png" width="356" height="45" alt="Логотип Friendly House приют для живтоных">
+            </picture>            
             <div class="contacts"><a href="tel:88493003957">8 (849) 300 - 39 -57</a></div>
         </div>       
     </header>
@@ -48,34 +62,58 @@
                     её человек</h2>
                 <ul class="banner__items">
                     <li class="banner__item banner__item_sara banner__activ" data-bg="./img/bg-banner-sara.png">
-                        <img class="banner__img" src="./img/sara-dog.png" width="80" height="80" alt="Сара">
+                        <picture class="banner__img">
+                            <source srcset="./img/sara-dog.avif" type="image/avif">
+                            <source srcset="./img/sara-dog.webp" type="image/webp"> 
+                            <img class="banner__img" src="./img/sara-dog.png" width="80" height="80" alt="Сара">
+                        </picture>                        
                         <p class="banner__name">Сара</p>
                     </li>
                     <li class="banner__item banner__item_boris" data-bg="./img/bg-banner-boris.png">
-                        <img class="banner__img" src="./img/boris-cat.png" width="80" height="80" alt="Кот Борис">
+                        <picture>
+                            <source srcset="./img/boris-cat.avif" type="image/avif">
+                            <source srcset="./img/boris-cat.webp" type="image/webp"> 
+                            <img class="banner__img" src="./img/boris-cat.png" width="80" height="80" alt="Кот Борис">
+                        </picture>                        
                         <p class="banner__name">Борис</p>
                     </li>
                     <li class="banner__item banner__item_lui" data-bg="./img/bg-banner-lui.png">
-                        <img class="banner__img" src="./img/lui-dog.png" width="80" height="80" alt="Луи">
+                        <picture>
+                            <source srcset="./img/lui-dog.avif" type="image/avif">
+                            <source srcset="./img/lui-dog.webp" type="image/webp"> 
+                            <img class="banner__img" src="./img/lui-dog.png" width="80" height="80" alt="Луи">
+                        </picture>                        
                         <p class="banner__name">Луи</p>
                     </li>
                     <li class="banner__item banner__item_pitter" data-bg="./img/bg-banner-pitter.png">
-                        <img class="banner__img" src="./img/rabbit-pitter.png" width="80" height="80" alt="Питер">
+                        <picture>
+                            <source srcset="./img/rabbit-pitter.avif" type="image/avif">
+                            <source srcset="./img/rabbit-pitter.webp" type="image/webp"> 
+                            <img class="banner__img" src="./img/rabbit-pitter.png" width="80" height="80" alt="Питер">
+                        </picture>                        
                         <p class="banner__name">Питер</p>
                     </li>
                     <li class="banner__item banner__item_kenny" data-bg="./img/bg-banner-kenny.png">
-                        <img class="banner__img" src="./img/keny-cat.png" width="80" height="80" alt="Кенни">
+                        <picture>
+                            <source srcset="./img/keny-cat.avif" type="image/avif">
+                            <source srcset="./img/keny-cat.webp" type="image/webp"> 
+                            <img class="banner__img" src="./img/keny-cat.png" width="80" height="80" alt="Кенни">
+                        </picture>                        
                         <p class="banner__name">Кенни</p>
                     </li>
                 </ul>
                 <button class="banner__btn btn modal__btn" type="submit">
-                    <img class="banner__btn_img btn__img" src="./img/btn.png" width="111" height="101" alt="лапа">
+                    <picture>
+                        <source srcset="./img/btn.avif" type="image/avif">
+                        <source srcset="./img/btn.webp" type="image/webp"> 
+                        <img class="banner__btn_img btn__img" src="./img/btn.png" width="111" height="101" alt="лапа">
+                    </picture>                    
                     <span class="banner__btn_p btn__p">Жми на лапку, чтобы помочь!</span>
                 </button>
             </div>           
         </section>
 
-        <section class="present">
+        <section class="present" id="present">
             <div class="container present__container">
                 <h2 class="present__title">О приюте</h2>
                 <p class="present__discription">Приют "Friendly House" - это целый комплекс 
@@ -92,32 +130,48 @@
             </div>            
         </section>
 
-        <section class="my-project">
+        <section class="my-project" id="my-project">
             <div class="container my-project__container">
                 <h2 class="my-project__title">Наши проекты</h2>
                 <div class="my-project__grid-items">
                     <div class="my-project__grid-item my-project__item-1">
                         <ul class="my-project__items">
                             <li class="my-project__item">
-                                <img class="my-project__img" src="./img/new-house.jpg" alt="фото новый дом для животных" >
+                                <picture class="my-project__picture">
+                                    <source srcset="./img/new-house.avif" type="image/avif">
+                                    <source srcset="./img/new-house.webp" type="image/webp"> 
+                                    <img class="my-project__img" src="./img/new-house.jpg" width="280" height="180" alt="фото новый дом для животных" >
+                                </picture>                                
                                 <h3 class="my-project__name">Новый дом для животных</h3>
                                 <p class="my-project__subscription">Приют появился практически одновременно с созданием Фонда в ...</p>
                                 <a href="#" class="my-project__link">Подробнее</a>
                             </li>
                             <li class="my-project__item">
-                                <img class="my-project__img" src="./img/milk-mode.png" alt="фото Маленькие модники животные">
+                                <picture class="my-project__picture">
+                                    <source srcset="./img/milk-mode.avif" type="image/avif">
+                                    <source srcset="./img/milk-mode.webp" type="image/webp"> 
+                                    <img class="my-project__img" src="./img/milk-mode.png" width="280" height="180" alt="фото Маленькие модники животные">
+                                </picture>                                
                                 <h3 class="my-project__name">Маленькие модники</h3>
                                 <p class="my-project__subscription">Наши котики и собачки тоже любят наряжаться, чтобы красиво выглядеть ...</p>
                                 <a href="#" class="my-project__link">Подробнее</a>
                             </li>
                             <li class="my-project__item">
-                                <img class="my-project__img" src="./img/geamy-my.png" alt="фото Поиграй со мной!" >
+                                <picture class="my-project__picture">
+                                    <source srcset="./img/geamy-my.avif" type="image/avif">
+                                    <source srcset="./img/geamy-my.webp" type="image/webp"> 
+                                    <img class="my-project__img" src="./img/geamy-my.png" width="280" height="180" alt="фото Поиграй со мной!" >
+                                </picture class="my-project__picture">                                
                                 <h3 class="my-project__name">Поиграй со мной!</h3>
                                 <p class="my-project__subscription">Новая программа нашего приюта “Поиграй со мной”. Приводите своих ...</p>
                                 <a href="#" class="my-project__link">Подробнее</a>
                             </li>
                             <li class="my-project__item">
-                                <img class="my-project__img" src="./img/best-foto.png" alt="фото Конкурс Лучшее фото" >
+                                <picture class="my-project__picture">
+                                    <source srcset="./img/best-foto.avif" type="image/avif">
+                                    <source srcset="./img/best-foto.webp" type="image/webp"> 
+                                    <img class="my-project__img" src="./img/best-foto.png" width="280" height="180" alt="фото Конкурс Лучшее фото" >
+                                </picture>                                
                                 <h3 class="my-project__name">Конкурс “Лучшее фото”</h3>
                                 <p class="my-project__subscription">Приходи к нам в Friendly House и делай классные фотографии наших животн...</p>
                                 <a href="#" class="my-project__link">Подробнее</a>
@@ -132,28 +186,74 @@
                         </div>
                         <div class="my-project__content-2">
                             <h3 class="my-project__name my-project__name_content-2">Больше проектов</h3>
-                            <div class="my-project__content-grid">
-                                <img class="my-project__content-img" src="./img/1.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/2.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/3.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/4.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/5.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/6.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/7.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/8.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/9.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/10.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/11.jpg" alt="фото животного" >
-                                <img class="my-project__content-img" src="./img/12.jpg" alt="фото животного" >
-                            </div>
-                            
+                            <div class="my-project__content-grid">                                
+                                <picture>
+                                    <source srcset="./img/1.avif" type="image/avif">
+                                    <source srcset="./img/1.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/1.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/2.avif" type="image/avif">
+                                    <source srcset="./img/2.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/2.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/3.avif" type="image/avif">
+                                    <source srcset="./img/3.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/3.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/4.avif" type="image/avif">
+                                    <source srcset="./img/4.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/4.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/5.avif" type="image/avif">
+                                    <source srcset="./img/5.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/5.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/6.avif" type="image/avif">
+                                    <source srcset="./img/6.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/6.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/7.avif" type="image/avif">
+                                    <source srcset="./img/7.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/7.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/8.avif" type="image/avif">
+                                    <source srcset="./img/8.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/8.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/9.avif" type="image/avif">
+                                    <source srcset="./img/9.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/9.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/10.avif" type="image/avif">
+                                    <source srcset="./img/10.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/10.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/11.avif" type="image/avif">
+                                    <source srcset="./img/11.webp" type="image/webp"> 
+                                    <img class="my-project__content-img" src="./img/11.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>
+                                <picture>
+                                    <source srcset="./img/12.avif" type="image/avif">
+                                    <source srcset="./img/12.webp" type="image/webp">     
+                                    <img class="my-project__content-img" src="./img/12.jpg" width="80" height="70" alt="фото животного" >
+                                </picture>     
                         </div>
                     </div>
                 </div>
             </div>            
         </section>
         
-        <article class="help">
+        <article class="help" id="help">
             <div class="container help__container">
                 <h2 class="help__title">Как ты можешь нам помочь?</h2> 
                 <ol class="help__items">
@@ -171,7 +271,11 @@
                         <div class="help__content">
                             <h3 class="help__h3">Стать волонером</h3>
                             <div class="help__item_volonter">
-                                <img class="help__volonter_img" src="./img/bg-volonter.jpg" width="580" height="380" alt="собачка">
+                                <picture>
+                                    <source srcset="./img/bg-volonter.avif" type="image/avif">
+                                    <source srcset="./img/bg-volonter.webp" type="image/webp"> 
+                                    <img class="help__volonter_img" src="./img/bg-volonter.jpg" width="580" height="380" alt="собачка">
+                                </picture>                                
                                 <p class="help__discription help__discription_volonter">Наш приют "Friendly House" привлекает волонтеров для 
                                     оказания помощи в самых разных форматах! От финансовой помощи 
                                     и набирающего популярность интеллектуального 
@@ -201,11 +305,83 @@
                 </ol>
 
                 <button class="help__btn btn modal__btn" type="submit">
-                    <img class="help__btn_img btn__img" src="./img/btn.png" width="111" height="101" alt="лапа">
+                    <picture>
+                        <source srcset="./img/btn.avif" type="image/avif">
+                        <source srcset="./img/btn.webp" type="image/webp"> 
+                        <img class="help__btn_img btn__img" src="./img/btn.png" width="111" height="101" alt="лапа">
+                    </picture>                    
                     <span class="help__btn_p btn__p">Жми на лапку, чтобы помочь!</span>
                 </button>
             </div>            
         </article>
+
+        <section class="pets" id="pets">
+            <div class="container pets__container">
+                <h2 class="pets__title">Наши питомцы</h2>
+                <ul class="pets__items">
+                    <li class="pets__item">
+                        <figure class="pets__figure">
+                            <picture>
+                                <source srcset="./img/tvincki-pinki.avif" type="image/avif">
+                                <source srcset="./img/tvincki-pinki.webp" type="image/webp"> 
+                                <img src="./img/tvincki-pinki.jpg" width="480" height="280" alt="Твинки и Пинки, 2 месяца" class="pets__img">
+                            </picture>                            
+                            <figcaption class="pets__figcaption">Твинки и Пинки, 2 месяца</figcaption>
+                        </figure>
+                    </li>
+                    <li class="pets__item">
+                        <figure class="pets__figure">
+                            <picture>
+                                <source srcset="./img/murzik.avif" type="image/avif">
+                                <source srcset="./img/murzik.webp" type="image/webp"> 
+                                <img src="./img/murzik.jpg" width="280" height="280" alt="Мурзик, 6 месяцев" class="pets__img">
+                            </picture>                            
+                            <figcaption class="pets__figcaption">Мурзик, 6 месяцев</figcaption>
+                        </figure>
+                    </li>
+                    <li class="pets__item">
+                        <figure class="pets__figure">
+                            <picture>
+                                <source srcset="./img/misha-richard.avif" type="image/avif">
+                                <source srcset="./img/misha-richard.webp" type="image/webp"> 
+                                <img src="./img/misha-richard.jpg" width="380" height="650" alt="Миша (кот) и Ричард (пёс), 3 года и 5 лет" class="pets__img">
+                            </picture>                            
+                            <figcaption class="pets__figcaption">Миша (кот) и Ричард (пёс), 3 года и 5 лет</figcaption>
+                        </figure>
+                    </li>
+                    <li class="pets__item">
+                        <figure class="pets__figure">
+                            <picture>
+                                <source srcset="./img/djeck.avif" type="image/avif">
+                                <source srcset="./img/djeck.webp" type="image/webp"> 
+                                <img src="./img/djeck.jpg" width="280" height="280" alt="Джек, 1 год" class="pets__img">
+                            </picture>                            
+                            <figcaption class="pets__figcaption">Джек, 1 год</figcaption>
+                        </figure>
+                    </li>
+                    <li class="pets__item">
+                        <figure class="pets__figure">
+                            <picture>
+                                <source srcset="./img/djery.avif" type="image/avif">
+                                <source srcset="./img/djery.webp" type="image/webp"> 
+                                <img src="./img/djery.jpg" width="280" height="280"alt="Джерри, 3 недели" class="pets__img">
+                            </picture>                            
+                            <figcaption class="pets__figcaption">Джерри, 3 недели</figcaption>
+                        </figure>
+                    </li>
+                    <li class="pets__item">
+                        <figure class="pets__figure">
+                            <picture>
+                                <source srcset="./img/roky-sanya.avif" type="image/avif">
+                                <source srcset="./img/roky-sanya.webp" type="image/webp"> 
+                                <img src="./img/roky-sanya.jpg" width="180" height="280"alt="Рокки и Сеня, 2 и 3 года" class="pets__img">
+                            </picture>                            
+                            <figcaption class="pets__figcaption">Рокки и Сеня, 2 и 3 года</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <section class="form">
             <div class="container form__container">
@@ -231,7 +407,12 @@
         <div class="form modal__form">
             <div class="container form__container modal__container">                
                 <form class="form__content modal__form-content" action="https://jsonplaceholder.typicode.com/posts" method="post" target="_blank">
-                    <img class="modal__close" src="./img/close.png" width="22" height="22" alt="close">
+                    <picture>
+                        <source srcset="./img/close.avif" type="image/avif">
+                        <source srcset="./img/close.webp" type="image/webp"> 
+                        <img class="modal__close" src="./img/close.png" width="22" height="22" alt="close">
+                    </picture>
+                    
                     <h2 class="form__title">Ты можешь помочь нам!</h2>
                     <p class="form__subscription">Хочешь забрать питомца, стать волонтером, или опекуном?
                         <span class="form__add">Свяжись с нами!</span></p>

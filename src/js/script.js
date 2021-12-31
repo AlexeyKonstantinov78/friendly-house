@@ -20,6 +20,7 @@ const bannerItem = () => {
     return;
 };
 
+
 const changeBg = (item) => {
     
     const li = bannerItem(),
@@ -27,7 +28,7 @@ const changeBg = (item) => {
         content = item.querySelector('p').textContent,
         bg = item.dataset.bg,
         bannerTitleName = document.querySelector('.banner__title_name');
-  
+
     if (bannerItem() !== undefined) {
         orderNum += 1;
         li.style.order = `${orderNum}`;
@@ -41,15 +42,8 @@ const changeBg = (item) => {
 bannerItems.addEventListener('click', (event) => {
     let target = event.target;
 
-    if (target.closest('.banner__item')) {
-        
-        if (target.parentElement.classList.contains('banner__item')) {
-            changeBg(target.parentElement);
-        } else {
-            changeBg(target);
-        }           
+    changeBg(target.closest('.banner__item'));
 
-    }
 });
 
 //открытие бургер меню и формы
@@ -67,13 +61,16 @@ function show (obj) {
     if (obj.hasClass('menu-burger__nav')) obj.toggleClass('close');
 }
 
-$('.menu-burger__svg, .modal__btn, .modal__close, .modal').on('click', function (event) {
+$('.menu-burger__svg, .menu-burger__items, .modal__btn, .modal__close, .modal').on('click', function (event) {
     let target = event.target;
 
     if ($(this).hasClass('menu-burger__svg')) {
         if (!menuBurgerNav.hasClass('close')) hide(menuBurgerNav);
-        else show(menuBurgerNav);        
+        else show(menuBurgerNav);   
     }
+
+    if ($(this).hasClass('menu-burger__items') && target.closest('.menu-burger__link')) hide(menuBurgerNav);
+
 
     if ($(this).hasClass('modal__btn')) {
         if (!menuBurgerNav.hasClass('close')) hide(menuBurgerNav);
