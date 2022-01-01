@@ -32,14 +32,14 @@
     };
     background: {
         image: -webkit-image-set(
-            url("#{$url}.avif"),    
-            url("#{$url}.webp"),    
-            url("#{$url}.#{$type}")
+            url("#{$url}.avif") 1x,    
+            url("#{$url}.webp") 1x,    
+            url("#{$url}.#{$type}") 1x
         );
         image: image-set(
-            url("#{$url}.avif"),    
-            url("#{$url}.webp"),    
-            url("#{$url}.#{$type}")
+            url("#{$url}.avif") 1x,    
+            url("#{$url}.webp") 1x,     
+            url("#{$url}.#{$type}") 1x
         );
     };
 }
