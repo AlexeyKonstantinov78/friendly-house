@@ -46,14 +46,30 @@
                 </nav>
             </div>
             <picture>
+                <source media="(max-width: 320px)" srcset="./img/logo320.avif" type="image/avif">
+                <source media="(max-width: 320px)" srcset="./img/logo320.webp" type="image/webp"> 
+                <source media="(max-width: 768px)" srcset="./img/logo768.avif" type="image/avif">
+                <source media="(max-width: 768px)" srcset="./img/logo768.webp" type="image/webp"> 
+                <source media="(max-width: 1024px)" srcset="./img/logo1024.avif" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="./img/logo1024.webp" type="image/webp"> 
+                <source media="(min-resolution: 2dppx)" srcset="./img/logo@2x.avif" type="image/avif">
+                <source media="(min-resolution: 2dppx)" srcset="./img/logo@2x.webp" type="image/webp"> 
                 <source srcset="./img/logo.avif" type="image/avif">
                 <source srcset="./img/logo.webp" type="image/webp">                
-                <img class="logo__img" src="./img/logo.png" width="356" height="45" alt="Логотип Friendly House приют для живтоных">
+                <img class="logo__img" 
+                    src="./img/logo.png" 
+                    width="356" height="72" 
+                    alt="Логотип Friendly House приют для живтоных"
+                    srcset="./img/logo.png 1440w,
+                            ./img/logo1024.png 1024w,
+                            ./img/logo768.png 768w,
+                            ./img/logo320.png 320w"
+                    sizes="(max-width: 1200px) 40vw, (max-width: 768px) 40vw">
             </picture>            
             <div class="contacts"><a href="tel:88493003957">8 (849) 300 - 39 -57</a></div>
         </div>       
     </header>
-    <main class="main">
+    <main class="main" style="display: none;">
 
         <section class="banner">
             <div class="container banner__container" >
