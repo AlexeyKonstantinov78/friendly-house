@@ -3,8 +3,7 @@
 }
 
 .present__container {
-    position: relative;
-    padding: 90px 0;
+    position: relative;    
     @include bg-avif-webp("./../img/bg-dog-about", "jpg");
     // background-image: url("./../img/bg-dog-about.jpg");
     background-repeat: no-repeat;

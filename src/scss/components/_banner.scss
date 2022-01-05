@@ -1,21 +1,13 @@
+.banner {
+    padding-top: 0;
+}
+
 .banner__container {
-    position: relative;
-    // background-image: url("./../img/bg-banner-sara.png");
-    // background-image: -webkit-image-set(
-    //     url("./../img/bg-banner-sara.avif"),
-    //     url("./../img/bg-banner-sara.webp"),
-    //     url("./../img/bg-banner-sara.png")
-    // );
-    // background-image: image-set(
-    //     url("./../img/bg-banner-sara.avif"),
-    //     url("./../img/bg-banner-sara.webp"),
-    //     url("./../img/bg-banner-sara.png")
-    // );
+    position: relative;    
     @include bg-avif-webp("./../img/bg-banner-sara", "png");
     background-repeat: no-repeat;
     background-position: center center; 
-    height: 580px;
-    margin-bottom: 90px;
+    height: 580px;    
     display: flex;
     justify-content: space-between;
 }
