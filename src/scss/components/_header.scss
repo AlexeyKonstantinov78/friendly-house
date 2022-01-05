@@ -29,6 +29,10 @@
     margin-bottom: 15px;
 }
 
+.menu-burger__svg_close {
+    display: none;
+}
+
 .menu-burger__nav {
     display: none;
     position:absolute;
@@ -162,5 +166,6 @@
     @media (max-width: 640px) {
         font-size: 14px;
         line-height: 20px;
+        padding-top: 0;
     }
 }
