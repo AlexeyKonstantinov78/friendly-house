@@ -17,18 +17,30 @@
     flex-direction: column;
     align-items: center;
     transition: filter .5s;
-}
+    @media (max-width: 1200px) {        
+        font-size: 12px;
+        line-height: 18px;
+        width: 148px;
+        height: 126px; 
+    }
 
-.btn__img {
+    &__img {
     transition: filter .3s;
-}
+        @media (max-width: 1200px) {
+        width: 83px;
+        height: 80px;
+        }
+    }
 
-.btn:hover,
-.btn:active {
-    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
-}
+    &:hover,
+    &:active {
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+    }
 
-.btn:hover .btn__img,
-.btn:active .btn__img {
-    filter: drop-shadow(0px -4px 6px var(--color-contnet));
+    &:hover .btn__img,
+    &:active .btn__img {
+        filter: drop-shadow(0px -4px 6px var(--color-contnet));
+    }
+
+
 }

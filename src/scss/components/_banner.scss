@@ -13,6 +13,13 @@
             height: 450px; 
             background-size: 416px;
         }
+        @media (max-width: 840px) {
+            height: 498px; 
+            flex-wrap: wrap;
+            justify-content: end;
+            background-position: center bottom; 
+        }
+
     }
     &__title {
         display: inline-block;
@@ -22,11 +29,19 @@
         font-weight: 300;
         font-size: 40px;
         line-height: 60px;
+        width: 480px;
         @media (max-width: 1200px) {
             padding-top: 69px;
             font-weight: 300;
             font-size: 30px;
             line-height: 44px;
+            width: 300px;
+        }
+        @media (max-width: 840px) {
+            font-size: 24px;
+            line-height: 30px; 
+            padding-top: 0; 
+            width: 100%;             
         }
     }
     &__title_color {
@@ -37,6 +52,10 @@
             font-size: 44px;
             line-height: 54px;
         }
+        @media (max-width: 840px) {
+            font-size: 40px;
+            line-height: 44px;
+        }
     }
 
     &__btn {
@@ -44,6 +63,10 @@
         bottom: 25px;   
         @media (max-width: 1200px) {
             bottom: 60px;
+        }
+        @media (max-width: 840px) {
+            left: 30px;
+            bottom: 171px;
         }
     }
 
@@ -58,6 +81,11 @@
             padding-top: 32px;
             gap: 20px;
         }
+        @media (max-width: 840px) {
+            gap: 15px;
+            padding-top: 83px;
+
+        }
     }
 
     &__item {
@@ -68,10 +96,18 @@
         gap: 20px;
         cursor: pointer;
         border: 1px solid transparent;
+        @media (max-width: 840px) {
+            width: 140px;
+            height: 60px;
+        }
     }
 
     &__img {
         z-index: -1;
+        @media (max-width: 840px) {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__item:hover {
@@ -96,6 +132,10 @@
         @media (max-width: 1200px) {
             font-size: 18px;
             line-height: 24px;
+        }
+        @media (max-width: 840px) {
+            font-size: 14px;
+            line-height: 20px;
         }
     }
     
