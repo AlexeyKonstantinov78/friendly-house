@@ -23,12 +23,23 @@
         width: 148px;
         height: 126px; 
     }
+    @media (max-width: 640px) {
+        font-weight: 550;
+        font-size: 8px;
+        line-height: 12px;
+        width: 84px;
+        height: 78px; 
+    }
 
     &__img {
     transition: filter .3s;
         @media (max-width: 1200px) {
         width: 83px;
         height: 80px;
+        }
+        @media (max-width: 640px) {
+            width: 51px;
+            height: 50px;
         }
     }
 
