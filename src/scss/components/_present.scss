@@ -1,45 +1,114 @@
 .present {
     background-color: var(--bg);
+    @media (max-width: 1000px) {
+        height: 754px;
+    }
+    @media (max-width: 640px) {
+        height: 508px;
+        padding-bottom: 50px;
+    }
+
+    &__container {
+        position: relative;    
+        @include bg-avif-webp("./../img/bg-dog-about", "jpg");   
+        background: {
+            repeat: no-repeat;
+            size: 580px 330px;
+            position: bottom right 60px;
+        }  
+        @media (max-width: 1200px) {
+            background: {
+                size: 480px 308px;
+                position: bottom right 72px;
+            }
+        } 
+        @media (max-width: 1000px) {
+            height: 100%;
+            background: {
+                size: 700px 450px;
+                position: bottom center;
+            }
+        }
+        @media (max-width: 640px) {
+            background-size: 271px 174px;
+        }
+    }
+    
+    &__title {
+        text-align: left;
+        color: #282626;
+        margin-bottom: 33px;
+        line-height: 60px;
+        @media (max-width: 1200px) {
+            font-weight: normal;
+            font-size: 44px;
+            line-height: 54px;
+        }
+        @media (max-width: 1000px) {
+            font-size: 30px;
+            line-height: 34px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 640px) {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__discription {
+        font-family: HelveticaNeueCyr;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 30px;
+        color: #282626;
+        width: 480px;
+        @media (max-width: 1200px) {
+            font-size: 18px;
+            line-height: 26px;
+            width: 378px;
+        }
+        @media (max-width: 1000px) {
+            width: 100%;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @media (max-width: 640px) {
+            font-size: 14px;
+            line-height: 20px;              
+        }
+    }
+    
+    &__news {
+        position: absolute;
+        right: 60px;
+        bottom: -55px;
+        font-family: HelveticaNeueCyr;
+        font-style: normal;
+        font-weight: 550;
+        font-size: 20px;
+        line-height: 26px;
+        color: var(--color-contnet);
+        @include bg-avif-webp("./../img/bi_arrow-right", "png");
+        background-repeat: no-repeat;
+        background-size: 29px;    
+        background-position: right;
+        padding-right: 48px;
+        @media (max-width: 1200px) {
+            bottom: -50px;
+            right: 72px;
+        }
+        @media (max-width: 1000px) {
+            right: 32px;
+            bottom: -45px;
+        }
+        @media (max-width: 640px) {
+            right: 15px;
+            bottom: -35px;
+            font-size: 14px;
+            line-height: 20px;           
+        }
+    }
 }
 
-.present__container {
-    position: relative;    
-    @include bg-avif-webp("./../img/bg-dog-about", "jpg");
-    // background-image: url("./../img/bg-dog-about.jpg");
-    background-repeat: no-repeat;
-    background-size: 580px 330px;
-    background-position: right;
-}
-
-.present__title {
-    text-align: left;
-    color: #282626;
-    margin-bottom: 33px;
-}
-
-.present__discription {
-    font-family: HelveticaNeueCyr;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    color: #282626;
-}
-
-.present__news {
-    position: absolute;
-    right: 19px;
-    bottom: 35px;
-    font-family: HelveticaNeueCyr;
-    font-style: normal;
-    font-weight: 550;
-    font-size: 20px;
-    line-height: 26px;
-    color: var(--color-contnet);
-    @include bg-avif-webp("./../img/bi_arrow-right", "png");
-    // background-image: url("./../img/bi_arrow-right.png");
-    background-repeat: no-repeat;
-    background-size: 29px;    
-    background-position: right;
-    padding-right: 48px;
-}
