@@ -68,6 +68,7 @@ button {
     margin: 0 auto;
 
     @media (max-width: 1200px) {
+        width: 100%;
         padding: 0 72px;
     }
     @media (max-width: 1000px) {
