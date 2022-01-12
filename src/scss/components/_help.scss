@@ -87,7 +87,7 @@
         "img3 img2 img2";
     }
 
-    &___finance-img {
+    &__img {
         width: 100%;
         height: 100%;
     }
@@ -101,17 +101,6 @@
     &__finance_grid-img-3 {
         grid-area: img3;
     }
-
-
-    // &__content_finanse {
-    //     height: 298px;    
-    //     @include bg-avif-webp("./../img/bg-finanse", "jpg");
-    //     // background-image: url("./../img/bg-finanse.jpg");
-    //     background-repeat: no-repeat;
-    //     background-position: right;
-    //     background-size: 580px 298px;
-    //     padding-top: 49px;
-    // }
 
     &__item_volonter {
         position: absolute;
@@ -130,14 +119,37 @@
     &__discription_volonter {
         flex-grow: 2;
     }
-    
-    &__item_guardian {
-        height: 382px;    
-        @include bg-avif-webp("./../img/bg-guardian", "png");        
-        background-repeat: no-repeat;
-        background-position: right;
-        background-size: 580px 382px;
-        padding-top: 49px;
+
+    &__guardian-picture {
+        max-width: 580px;
+        
+        display: grid;
+        grid-template: repeat(2, 181px) / repeat(2, 1fr);
+        gap: 20px;
+        grid-template-areas: 
+        "img1 img2"
+        "img1 img3";
+    }
+
+    &__item_guardian::before {
+        margin-top: 30px;
+    }
+
+    &__content_guardian {
+        margin-top: 30px;
+    }
+
+
+    &__guardian_grid-img-1 {
+        grid-area: img1;
+    }
+
+    &__guardian_grid-img-2 {
+        grid-area: img2;
+    }
+
+    &__guardian_grid-img-3 {
+        grid-area: img3;
     }
 
     &__content_guardian {
