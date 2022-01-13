@@ -5,6 +5,11 @@
     &__title {
         line-height: 60px;
         margin-bottom: 50px;
+        @media (max-width: 1200px) {
+            font-size: 44px;
+            line-height: 50px;
+            margin-bottom: 40px;
+        }
     }
     &__items {        
         display: grid;  
@@ -12,6 +17,14 @@
         gap: 90px 20px;
         justify-items: center;
         align-items:flex-end ;
+        @media (max-width: 1200px) {
+            grid-template: 297px 239px 100px / repeat(9, 1fr);
+            gap: 63px 20px;
+            grid-template-areas:
+            "tvink tvink tvink tvink murz murz misha misha misha"
+            "djeck djeck djery djery roky roky misha misha misha"
+            ". . . . roky roky . . ."
+        }
     }
     &__item {
         display: block;
@@ -21,26 +34,44 @@
         &:nth-child(1){
             grid-column: 1 / span 5;
             grid-row: 1 / 2;
+            @media (max-width: 1200px) {
+                grid-area: tvink;
+            }
         }
         &:nth-child(2){
             grid-column: 6 / span 3;
             grid-row: 1 / 2;
+            @media (max-width: 1200px) {
+                grid-area: murz;
+            }
         }
         &:nth-child(3){            
             grid-column: 9 / span 4;
             grid-row: 1 / span 2;
+            @media (max-width: 1200px) {
+                grid-area: misha;
+            }
         }
         &:nth-child(4){
             grid-column: 1 / 4;
             grid-row: 2 / 3;
+            @media (max-width: 1200px) {
+                grid-area: djeck;
+            }
         }
         &:nth-child(5){
             grid-column: 4 / 7;
             grid-row: 2 / 3;
+            @media (max-width: 1200px) {
+                grid-area: djery;
+            }
         }
         &:nth-child(6){
             grid-column: 7 / 9;
             grid-row: 2 / 3;
+            @media (max-width: 1200px) {
+                grid-area: roky;
+            }
         }
     }
 
@@ -54,6 +85,9 @@
         width: 100%;
         height: calc(100% - 45px);
         margin-bottom: 20px;
+        @media (max-width: 1200px) {
+            margin-bottom: 10px;
+        }
     }
     &__figcaption{
         display: inline-block;
@@ -61,5 +95,9 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 26px;
+        @media (max-width: 1200px) {
+            font-size: 18px;
+            line-height: 24px;
+        }
     }
 }
