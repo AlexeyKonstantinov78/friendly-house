@@ -8,7 +8,10 @@ const sliderAll = () => {
 
 const pets = () => {
     const swiper3 = new Swiper('.swiper3', {
-        slidesPerView: 1,    
+        autoHeight: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+        centerInsufficientSlides: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
