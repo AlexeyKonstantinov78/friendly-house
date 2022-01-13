@@ -25,11 +25,18 @@
             "djeck djeck djery djery roky roky misha misha misha"
             ". . . . roky roky . . ."
         }
+        @media (max-width: 840px) {
+            display: flex;
+        }
     }
     &__item {
         display: block;
         width: 100%;
         height: 100%;
+        @media (max-width: 840px) {
+            width: 700px;
+            height: 478px;
+        }
         
         &:nth-child(1){
             grid-column: 1 / span 5;
@@ -78,7 +85,12 @@
     &__figure {
         margin: 0;
         width: 100%;
-        height: 100%;        
+        height: 100%; 
+        @media (max-width: 840px) {
+            width: 540px;
+            height: 410px;
+            margin: 0 auto;
+        }
     }
     &__img {
         display: block;
