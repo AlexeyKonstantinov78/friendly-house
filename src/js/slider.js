@@ -6,17 +6,28 @@ const sliderAll = () => {
     const swiper2 = new Swiper('.swiper2');  
 };
 
+const pets = () => {
+    const swiper3 = new Swiper('.swiper3', {
+        slidesPerView: 1,    
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });  
+};
+
 window.addEventListener('DOMContentLoaded', () => {
 
     // console.log('DOMContentLoaded' + ' : ' + window.screen.width);
     if (window.screen.width <= 640) sliderAll();
-    
+    if (window.screen.height <= 840) pets();
 });
 
 window.addEventListener('resize', () => {
 
     // console.log('resize' + ' : ' + window.screen.width);
     if (window.screen.width <= 640) sliderAll();
+    if (window.screen.height <= 840) pets();
 
 });
 

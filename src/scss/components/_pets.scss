@@ -10,6 +10,11 @@
             line-height: 50px;
             margin-bottom: 40px;
         }
+        @media (max-width: 840px) {
+            font-size: 30px;
+            line-height: 34px;
+        }
+
     }
     &__items {        
         display: grid;  
@@ -27,6 +32,7 @@
         }
         @media (max-width: 840px) {
             display: flex;
+            
         }
     }
     &__item {
@@ -34,8 +40,8 @@
         width: 100%;
         height: 100%;
         @media (max-width: 840px) {
-            width: 700px;
-            height: 478px;
+            // width: 700px;
+            // height: 478px;
         }
         
         &:nth-child(1){
@@ -88,8 +94,13 @@
         height: 100%; 
         @media (max-width: 840px) {
             width: 540px;
-            height: 410px;
+            height: 368px;
             margin: 0 auto;
+        }
+        & picture {
+            @media (max-width: 840px) {
+                
+            }
         }
     }
     &__img {
@@ -99,6 +110,13 @@
         margin-bottom: 20px;
         @media (max-width: 1200px) {
             margin-bottom: 10px;
+        }
+        @media (max-width: 840px) {
+            margin-bottom: 18px;
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 18px;
         }
     }
     &__figcaption{
@@ -111,5 +129,17 @@
             font-size: 18px;
             line-height: 24px;
         }
+        
+
+    }
+}
+
+.swiper3 {
+    @media (max-width: 840px) {
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+        max-width: 700px;
+        height: 410px;
     }
 }
