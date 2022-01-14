@@ -1,6 +1,7 @@
-ymaps.ready(init);
+const footerMaps = document.querySelector('.footer__maps');
 
 function init(){
+
     // Создание карты.
     var myMap = new ymaps.Map("map", {
         // Координаты центра карты.
@@ -10,7 +11,7 @@ function init(){
         center: [55.848762, 37.375830],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
-        zoom: 16
+        zoom: 15
     }),
 
     MyIcon = ymaps.templateLayoutFactory.createClass(
@@ -35,3 +36,8 @@ function init(){
 
     myMap.geoObjects.add(myPlacemark);
 }
+
+footerMaps.addEventListener('mouseenter', (event) => {    
+    
+    if (document.querySelector('#map').childNodes.length === 0) ymaps.ready(init);
+});
