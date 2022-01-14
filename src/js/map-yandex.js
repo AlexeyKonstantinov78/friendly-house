@@ -37,7 +37,37 @@ function init(){
     myMap.geoObjects.add(myPlacemark);
 }
 
+ 
+// Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
+function loadScript(url, callback){
+    var script = document.createElement("script");
+
+    if (script.readyState){  // IE
+        script.onreadystatechange = function(){
+        if (script.readyState == "loaded" ||
+                script.readyState == "complete"){
+            script.onreadystatechange = null;
+            callback();
+        }
+      };
+    } else {  // Другие браузеры
+        script.onload = function(){
+        callback();
+        };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+}
+
 footerMaps.addEventListener('mouseenter', (event) => {    
     
-    if (document.querySelector('#map').childNodes.length === 0) ymaps.ready(init);
+    if (document.querySelector('#map').childNodes.length === 0) {
+        // Загружаем API Яндекс.Карт
+        loadScript("https://api-maps.yandex.ru/2.1/?apikey=d50fe589-2d7c-4e62-b6cf-87dca45613ed&lang=ru_RU", function(){
+           // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+            ymaps.load(init);
+        });
+        
+    }
 });
