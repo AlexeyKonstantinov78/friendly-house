@@ -5,9 +5,12 @@
     &__item {
         display: flex;
         justify-content: space-between;
-        gap: 120px;
+        
         &:first-child {
             margin-bottom: 87px;
+            @media (max-width: 1200px) {
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -18,6 +21,12 @@
         line-height: 40px;
         padding-top: 64px;
         margin-bottom: 8px;
+        @media (max-width: 1200px) {
+            padding-top: 33px;
+            font-size: 34px;
+            line-height: 34px;
+            margin-bottom: 10px;
+        }
     }
 
     &__subcription {
@@ -25,6 +34,11 @@
         font-size: 20px;
         line-height: 26px;
         margin-bottom: 22px;
+        @media (max-width: 1200px) {
+            font-size: 18px;
+            line-height: 24px;  
+            margin-bottom: 20px;
+        }
     }
 
     &__address {
@@ -33,9 +47,11 @@
         font-size: 14px;
         line-height: 18px;
         margin-bottom: 30px;
-    }
-
-    &__address {
+        @media (max-width: 1200px) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    
         &-contacts {
             display: flex;
             flex-direction: column;
@@ -45,16 +61,24 @@
             font-weight: 550;
             font-size: 20px;
             line-height: 30px;
+            @media (max-width: 1200px) {
+                font-size: 18px;
+                line-height: 24px;
+                gap: 10px;
+            }
         }
         &-link {
             padding-left: 38px;
+            @media (max-width: 1200px) {
+                padding-left: 33px;
+            }
         }
         &-phone {
             @include bg-full("./../img/call.svg");
             background: {
                 size: 24px;
                 position: left;
-            }
+            }            
         }
 
         &-email {
@@ -62,19 +86,28 @@
             background: {
                 size: 24px;
                 position: left;
-            }
+            }            
         }
     }
 
     &__maps {
         width: 680px;
-        height: 360px;        
+        height: 360px; 
+        @media (max-width: 1200px) {
+            width: 480px;
+            height: 265px;
+        }       
     }
 
     &__logo {
         & picture {
             display: inline-block;
             margin-bottom: 8px;
+            @media (max-width: 1200px) {
+                margin-bottom: 10px;
+                width: 300px;
+                height: 37px;
+            }
         }
         &-add {
             font-family: HelveticaNeueCyr;
@@ -82,6 +115,10 @@
             font-weight: 300;
             font-size: 20px;
             line-height: 26px;
+            @media (max-width: 1200px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
         }
     }
         
@@ -92,9 +129,13 @@
     max-width: 380px;
     &__items {
         display: flex;
-        gap: 39px;
+        gap: 30px;
         margin-right: 35px;
         margin-bottom: 18px;
+        @media (max-width: 1200px) {
+            margin-right: 18px;
+            margin-bottom: 18px;
+        }
     }
 }
 
@@ -109,5 +150,10 @@
     &__name {
         margin-bottom: 2px;
     }
+}
+
+img.footer__logo-img {
+    width: 100%;
+    height: 100%;
 }
     

@@ -1,1 +1,4 @@
-<svg width="33" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".797" y="28.581" width="40" height="3" rx="1" transform="rotate(-45 .797 28.581)" fill="#282626"/><rect x="3.918" y=".297" width="40" height="3" rx="1" transform="rotate(45 3.918 .297)" fill="#282626"/></svg>
+<svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.797363" y="28.5814" width="40" height="3" rx="1" transform="rotate(-45 0.797363 28.5814)" fill="#282626"/>
+<rect x="3.91846" y="0.29718" width="40" height="3" rx="1" transform="rotate(45 3.91846 0.29718)" fill="#282626"/>
+</svg>
