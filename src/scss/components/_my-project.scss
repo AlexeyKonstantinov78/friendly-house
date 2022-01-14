@@ -60,6 +60,14 @@
             "img content2"
             "img content3";
         gap: 0 20px;
+        
+        border: 1px solid transparent;
+        transition: border-color 0.5s;
+        &:hover,
+        &:active {
+            border: 1px solid $color-content;
+        }
+        
         @media (max-width: 1200px) {
             grid-template-columns: 200px auto;
         }
@@ -74,6 +82,7 @@
     
     &__picture {
         grid-area: img; 
+        
     }
 
     &__img {
@@ -231,6 +240,12 @@
         }
     }
     &__item_content-2 {
+        border: 1px solid transparent;
+        transition: border-color 0.5s;
+        &:hover,
+        &:active {
+            border: 1px solid $color-content;
+        }
         
         @media (max-width: 1200px) {
             &:nth-child(n + 7) {
@@ -246,3 +261,4 @@
     }
 
 }
+
