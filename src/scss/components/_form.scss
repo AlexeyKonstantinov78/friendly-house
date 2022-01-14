@@ -253,7 +253,10 @@ label, input {
         text-transform: uppercase;
         line-height: 13; 
         @media (max-width: 640px) {
-            bottom: 25px
+            bottom: 35px;
+            width: 61px;
+            height: 73px; 
+            background-size: 61px 59px;
         }
     }   
 }
