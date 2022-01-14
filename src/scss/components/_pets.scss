@@ -167,8 +167,12 @@
 .swiper {
     &-button-prev,
     &-button-next {
+        display: none;
         width: 54px;
         height: 54px;
+        @media (max-width: 840px) {
+            display: flex;
+        }
         @media (max-width: 730px) {
             width: 26px;
             height: 26px;
