@@ -147,9 +147,13 @@
     background-position: left center;
     background-size: 24px;    
     padding-left: 38px;
+    transition: color .5s;
 
     @media (max-width: 840px) {
         display: none;
+    }
+    &:hover {
+        color: $hover-social;
     }
 }
 
