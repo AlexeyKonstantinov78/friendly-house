@@ -5,13 +5,27 @@
     &__item {
         display: flex;
         justify-content: space-between;
-        
+
         &:first-child {
             margin-bottom: 87px;
             @media (max-width: 1200px) {
                 margin-bottom: 50px;
             }
+            @media (max-width: 840px) {
+                flex-direction: column;
+                gap: 40px;
+                margin-bottom: 39px;
+            }
+
         }
+    }
+
+    &__content {
+        @media (max-width: 840px) {
+            display: flex;
+            justify-content: space-between;
+            // margin-bottom: 40px;
+        }        
     }
 
     &__name {
@@ -27,6 +41,11 @@
             line-height: 34px;
             margin-bottom: 10px;
         }
+        @media (max-width: 840px) {
+            padding-top: 0;
+            margin-bottom: 10px;
+            
+        }
     }
 
     &__subcription {
@@ -39,6 +58,7 @@
             line-height: 24px;  
             margin-bottom: 20px;
         }
+        
     }
 
     &__address {
@@ -50,6 +70,9 @@
         @media (max-width: 1200px) {
             font-size: 14px;
             line-height: 18px;
+        }
+        @media (max-width: 840px) {
+            margin-bottom: 0;
         }
     
         &-contacts {
@@ -65,6 +88,10 @@
                 font-size: 18px;
                 line-height: 24px;
                 gap: 10px;
+            }
+            @media (max-width: 840px) {
+                margin-right: 33px;
+                padding-top: 48px;
             }
         }
         &-link {
@@ -96,7 +123,13 @@
         @media (max-width: 1200px) {
             width: 480px;
             height: 265px;
-        }       
+        }
+        @media (max-width: 840px) {
+            order: 1;
+            width: 700px;
+            height: 265px;
+            margin: 0 auto;
+        }
     }
 
     &__logo {
