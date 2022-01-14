@@ -1,0 +1,113 @@
+.footer {
+    background-color: $bg-footer;
+    color: #FFFFFF;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        gap: 120px;
+        &:first-child {
+            margin-bottom: 87px;
+        }
+    }
+
+    &__name {
+        font-family: Comfortaa;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 40px;
+        padding-top: 64px;
+        margin-bottom: 8px;
+    }
+
+    &__subcription {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 22px;
+    }
+
+    &__address {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+
+    &__address {
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: HelveticaNeueCyr;
+            font-style: normal;
+            font-weight: 550;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &-link {
+            padding-left: 38px;
+        }
+        &-phone {
+            @include bg-full("./../img/call.svg");
+            background: {
+                size: 24px;
+                position: left;
+            }
+        }
+
+        &-email {
+            @include bg-full("./../img/email.svg");
+            background: {
+                size: 24px;
+                position: left;
+            }
+        }
+    }
+
+    &__maps {
+        width: 680px;
+        height: 360px;        
+    }
+
+    &__logo {
+        & picture {
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        &-add {
+            font-family: HelveticaNeueCyr;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+        
+    
+}
+
+.social {
+    max-width: 380px;
+    &__items {
+        display: flex;
+        gap: 39px;
+        margin-right: 35px;
+        margin-bottom: 18px;
+    }
+}
+
+.autor {
+    &__adress {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &__name {
+        margin-bottom: 2px;
+    }
+}
+    

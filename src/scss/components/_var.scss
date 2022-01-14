@@ -3,6 +3,8 @@
     --color-contnet: #FF8A00;
 }
 
+$bg-footer: #282626;
+
 @mixin font($name, $weight, $weightname) {
     font: {
         family: $name;
