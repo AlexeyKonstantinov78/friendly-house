@@ -5,6 +5,12 @@ label, input {
 
 .form {
     padding-bottom: 140px;
+    @media (max-width: 840px) {
+        padding-bottom: 100px;
+    }
+    @media (max-width: 640px) {
+        padding-bottom: 70px;
+    }
 
     &__content {
     position: relative;
@@ -21,6 +27,14 @@ label, input {
             min-height: 486px;
             padding: 50px 93px;
         }
+        @media (max-width: 840px) {
+            max-width: 540px;
+            min-height: 440px;
+            padding: 40px 60px;
+        }
+        @media (max-width: 640px) {
+            padding: 30px 29px;
+        }
     }
 
     &__title {
@@ -34,6 +48,16 @@ label, input {
         @media (max-width: 1000px) {
             font-size: 24px;
             line-height: 30px;
+        }
+        @media (max-width: 840px) {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 640px) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 14px;
         }
     }
 
@@ -50,6 +74,14 @@ label, input {
             font-size: 18px;
             line-height: 24px;
         }
+        @media (max-width: 840px) {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 640px) {
+            padding-left: 0;
+        }
     }
 
     &__add {
@@ -63,6 +95,13 @@ label, input {
         padding-left: 19px;
         @media (max-width: 1000px) {
             padding-left: 0;
+        }
+        @media (max-width: 840px) {
+            margin-bottom: 33px;
+        }
+        @media (max-width: 640px) {
+            margin-bottom: 30px;
+            text-align: center;
         }
     }
 
@@ -80,11 +119,20 @@ label, input {
             line-height: 24px;
             margin-right: 26px;
         }
-        
+        @media (max-width: 840px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @media (max-width: 640px) {
+            margin-bottom: 13px;
+        }
     }
 
     &__item:last-child {
         margin-right: 0;
+        @media (max-width: 640px) {
+            margin-bottom: 0;
+        }
     }
 
     &__phone {
@@ -94,6 +142,9 @@ label, input {
         @media (max-width: 1000px) {
             padding-left: 33px;
         }
+        @media (max-width: 640px) {
+            display: inline-block;
+        }
     }
 
     &__email {
@@ -102,6 +153,9 @@ label, input {
         padding-left: 35px;
         @media (max-width: 1000px) {
             padding-left: 33px;
+        }
+        @media (max-width: 640px) {
+            display: inline-block;
         }
     }
 
@@ -115,13 +169,24 @@ label, input {
             font-size: 18px;
             line-height: 24px;
         }
-        
+        @media (max-width: 840px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @media (max-width: 640px) {
+            margin-bottom: 14px;
+        }
     }
 
     &__label-input {
         margin-bottom: 108px;  
-        display: flex;
+        display: flex;        
         justify-content: center;
+        @media (max-width: 640px) {
+            flex-wrap: wrap;
+            gap: 14px;
+
+        }
     }
 
     &__label-name {
@@ -139,10 +204,14 @@ label, input {
             line-height: 10px;
             width: 200px;
         }
+        
     }
 
     &__label-name:first-child {
         margin-right: 15px;
+        @media (max-width: 640px) {
+            margin-right: 0;
+        }
     }
 
     &__label-name:hover .form__input{
@@ -182,6 +251,9 @@ label, input {
         line-height: 16px;
         text-align: center;
         text-transform: uppercase;
-        line-height: 13;    
+        line-height: 13; 
+        @media (max-width: 640px) {
+            bottom: 25px
+        }
     }   
 }
