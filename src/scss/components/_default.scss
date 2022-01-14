@@ -42,7 +42,7 @@ ul, ol, li {
 }
 
 p {
-    white-space: pre-line;
+   
     margin: 0;
     padding: 0;
 }
@@ -63,10 +63,35 @@ button {
 }
 
 .container {
-    width: 1300px;
+   max-width: 1300px;
+    padding: 0 60px;
     margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        width: 100%;
+        padding: 0 72px;
+    }
+    @media (max-width: 1000px) {
+        padding: 0 34px;
+    }
+    @media (max-width: 640px)  {
+        padding: 0 25px;
+    }
+
 }
 
-.main {
-    margin-top: 96px;
+section {
+    padding: 90px 0;
+
+    @media (max-width: 1200px) {
+        padding: 70px 0;
+    }
+    @media (max-width: 1000px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 640px)  {
+        padding: 30px 0;
+    }
 }
+
+

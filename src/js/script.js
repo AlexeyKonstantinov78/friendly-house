@@ -61,8 +61,26 @@ function show (obj) {
     if (obj.hasClass('menu-burger__nav')) obj.toggleClass('close');
 }
 
-$('.menu-burger__svg, .menu-burger__items, .modal__btn, .modal__close, .modal').on('click', function (event) {
+$('.menu-burger__btn, .menu-burger__svg, .menu-burger__items, .modal__btn, .modal__close, .modal').on('click', function (event) {
     let target = event.target;
+
+    if ($(this).hasClass('menu-burger__btn')) {
+
+        if (window.screen.width < 640) {
+            const burgerSvg =  $('.menu-burger__svg'),
+                burgerSvgClose =  $('.menu-burger__svg_close');
+
+            if (!$('.menu-burger__nav').hasClass('close')) {
+                
+                burgerSvg.css({display: 'none'});
+                burgerSvgClose.css({display: 'block'});
+            } else {
+                burgerSvg.css({display: 'block'});
+                burgerSvgClose.css({display: 'none'});
+            }
+            
+        }
+    }
 
     if ($(this).hasClass('menu-burger__svg')) {
         if (!menuBurgerNav.hasClass('close')) hide(menuBurgerNav);

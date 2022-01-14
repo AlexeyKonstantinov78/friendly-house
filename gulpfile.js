@@ -24,7 +24,8 @@ let dev = false;
 const sass = gulpSass(sassPkg);
 
 const allJS = [
-    "src/libs/jquery-3.6.0.min.js",    
+    "src/libs/jquery-3.6.0.min.js",
+    "src/libs/swiper-bundle.min.js",    
 ];
 
 //задачи 
@@ -33,7 +34,7 @@ export const html = () => {
     return gulp.src('src/*.html')
         .pipe(htmlmin({
             removeComments: true,
-            collapseWhitespace: false, //если  используется white-space: pre-line; отключите
+            collapseWhitespace: true, //если  используется white-space: pre-line; отключите
         }))
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
