@@ -42,7 +42,7 @@ const changeBg = (item) => {
 bannerItems.addEventListener('click', (event) => {
     let target = event.target;
 
-    changeBg(target.closest('.banner__item'));
+    if (target.closest('.banner__item')) changeBg(target.closest('.banner__item'));    
 
 });
 

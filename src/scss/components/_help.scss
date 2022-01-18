@@ -25,7 +25,14 @@
     
     &__items {
         list-style-type: none;  
-        counter-reset: count 0;    
+        counter-reset: count 0;
+        margin-bottom: 50px;
+        @media (max-width: 1200px) { 
+            margin-bottom: 40px;
+        }    
+        @media (max-width: 640px) { 
+            margin-bottom: 30px;
+        }
     }
     
     &__item {
@@ -44,7 +51,11 @@
         @media (max-width: 640px) { 
             margin-bottom: 30px;
         }
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
+
     
     &__item:before {
         content: counter(count);
@@ -320,10 +331,10 @@
     }
 
     &__content_guardian {
-        margin-top: 30px;
+        padding-top: 39px;
         max-width: 480px;
         @media (max-width: 1200px) {
-            margin-top: 0;
+            padding-top: 9px;
         }
         @media (max-width: 1000px) { 
             max-width: unset;
